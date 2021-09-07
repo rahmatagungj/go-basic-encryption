@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 
-	encrypt "github.com/rahmatagungj/encrypt/formula"
+	"github.com/rahmatagungj/encrypt/formula"
 )
 
 func main() {
-	test := encrypt.Encrypt("12", "rahmat")
-	fmt.Println(test)
+	secured := formula.Encrypt("rahmat")
+	decrypted := formula.Decrypt(secured)
+
+	fmt.Println("Ecnrypted: ", secured)
+	fmt.Println("Decrypted: ", decrypted)
 }
